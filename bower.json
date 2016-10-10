@@ -1,0 +1,24 @@
+{
+  "name": "svg-extras",
+  "version": "0.0.1",
+  "description": "Extends basic svg figures",
+  "homepage": "https://github.com/HaturiHanzo/svg-extras",
+  "author": "Roman Mishchenko <mishchenkoroman95@gmail.com>",
+  "keywords": [
+    "SVG",
+    "rectangle",
+    "polygon",
+    "resizable",
+    "figure",
+    "shape",
+    "drag",
+    "drop"
+  ],
+  "bugs": {
+    "url": "https://github.com/HaturiHanzo/svg-extras/issues"
+  },
+  "dependencies": {
+    "inherit": "dfilatov/inherit#2.2.4"
+  },
+  "license": "MIT"
+}
