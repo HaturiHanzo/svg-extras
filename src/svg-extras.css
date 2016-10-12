@@ -1,0 +1,105 @@
+.svg-container_fluid {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.svg_bg-color_default {
+    fill: #00d;
+}
+
+.svg-element_hidden {
+    display: none !important;
+}
+
+.svg_draggable:active {
+    cursor: move;
+}
+
+.svg-polygon {
+    fill-opacity: 0.6;
+    fill-rule: evenodd;
+}
+
+.svg-polygon.active {
+    fill-opacity: 0.75;
+    stroke: #050;
+    stroke-width: 3px;
+}
+
+.svg-polygon-vertex {
+    fill-opacity: 1;
+    fill: #e00;
+    display: none;
+}
+
+.svg-polygon-vertex.active {
+    display: block;
+}
+
+.svg-rectangle {
+    fill: #500;
+}
+
+.svg-resizable-rectangle {
+    fill-opacity: 0.6;
+}
+
+.svg-resizable-rectangle.active {
+    fill-opacity: 0.75;
+    stroke: #050;
+    stroke-width: 3px;
+}
+
+.svg-rectangle-control {
+    fill-opacity: 1;
+    fill: #e00;
+    display: none;
+}
+
+.svg-rectangle-control.active {
+    display: block;
+}
+
+.svg-rectangle-control_type_horizontal:hover {
+    cursor: col-resize;
+}
+
+.svg-rectangle-control_type_vertical:hover {
+    cursor: row-resize;
+}
+
+.svg-border.active {
+    stroke: #77f;
+    stroke-width: 1px;
+    stroke-dasharray: 5,5;
+}
+
+.svg-bordered-rect {
+    fill-opacity: 0.6;
+}
+
+.svg-bordered-rect.active {
+    fill-opacity: 0.75;
+}
+
+.svg-border-control {
+    fill-opacity: 1;
+    fill: #e00;
+    display: none;
+}
+
+.svg-border-control.active {
+    display: block;
+}
+
+.unselectable {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+

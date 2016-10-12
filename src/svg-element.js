@@ -7,7 +7,7 @@
 (function (svgext) {
     'use strict';
 
-    svgext.inherit(null, {
+    svgext.SVGElement = inherit({
 
         NS: 'http://www.w3.org/2000/svg',
 

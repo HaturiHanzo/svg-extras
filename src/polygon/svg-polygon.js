@@ -15,7 +15,7 @@
 (function (svgext) {
     'use strict';
 
-    svgext.SVGPolygon = inherit([svgext.SVGElement, svgext.SVGDraggable, svgext.SVGBlock], {
+    svgext.SVGPolygon = inherit([svgext.SVGElement, svgext.SVGBlock, svgext.SVGDraggable], {
 
         /**
          * SVGPolygon class constructor
@@ -203,12 +203,11 @@
 
         /**
          * Polygon coordinates getter
+         *
+         * @param {Boolean} [relative=false]
+         * @returns {*}
          */
         getValue: function (relative) {
-            if (relative === undefined) {
-                relative = true;
-            }
-
             var containerSize = this.getContainerRect();
 
             return this.vertexes.reduce(function (all, vertex) {

@@ -6,9 +6,20 @@ var svgext = (function () {
     if (!inherit) {
         throw new Error('Svg-extras requires https://github.com/dfilatov/inherit');
     }
+    var isTouchDevice = 'ontouchstart' in document.documentElement;
 
     return {
-        _isTouchDevice: 'ontouchstart' in document.documentElement,
+        _isTouchDevice: isTouchDevice,
+
+        /**
+         * Runs events only in a new request animation frame
+         *
+         * @param {String} type Event name
+         * @param {String} callback Event listener
+         * @param {DOMElement} [domNode]
+         * @private
+         * @returns {Function} detach function
+         */
         _throttleEventListener: function (type, callback, domNode) {
             var running = false,
                 detached = false;
@@ -35,10 +46,10 @@ var svgext = (function () {
             };
         },
         default: {
-            vertexWidth: this.isTouchDevice ? 20 : 12,
-            vertexHeight: this.isTouchDevice ? 20 : 12,
-            borderOffset: this.isTouchDevice ? 16 : 14,
-            polygonAddPointDist: this.isTouchDevice ? 20 : 0
+            vertexWidth: isTouchDevice ? 20 : 12,
+            vertexHeight: isTouchDevice ? 20 : 12,
+            borderOffset: isTouchDevice ? 16 : 14,
+            polygonAddPointDist: isTouchDevice ? 20 : 0
         }
     };
 }());

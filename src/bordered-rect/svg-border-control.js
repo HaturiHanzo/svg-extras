@@ -6,7 +6,7 @@
 (function (svgext) {
     'use strict';
 
-    svgext.SVGBorderControl = inherit(SVGRect, {
+    svgext.SVGBorderControl = inherit(svgext.SVGRect, {
 
         /**
          * Creates new SVGBorderControl instance

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>svg-extras.polygon</title>
+        <link rel="stylesheet" href="/dist/svg-extras.css"/>
+        <link rel="stylesheet" href="/examples/example.css"/>
+    </head>
+    <body>
+        <div>
+            <a href="/examples">home</a>
+            <h3>Polygon</h3>
+            <div class="container"></div>
+            <div class="controls">
+                <button onclick="polygonCtrl.createPolygon()">create polygon</button>
+                <button onclick="polygonCtrl.removeActive()">remove active</button>
+                <button onclick="polygonCtrl.removeAll()">remove all</button>
+                <button onclick="polygonCtrl.logActive()">log active value</button>
+                <button onclick="polygonCtrl.logAll()">log all rel vals.</button>
+                <button onclick="polygonCtrl.checkAll()">check polygons simplicity and highlight main polygons</button>
+            </div>
+            <div class="log"></div>
+        </div>
+    </body>
+    <script src="/bower_components/inherit/lib/inherit.js"></script>
+    <script src="/dist/svg-extras.js"></script>
+    <script src="/examples/polygon/polygon.js"></script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>svg-extras.bordered-rect</title>
+        <link rel="stylesheet" href="/dist/svg-extras.css"/>
+        <link rel="stylesheet" href="/examples/example.css"/>
+    </head>
+    <body>
+        <div>
+            <a href="/examples">home</a>
+            <h3>Bordered rectangle</h3>
+            <div class="container"></div>
+            <div class="controls">
+                <button onclick="borderedRectCtrl.createRect()">create rect</button>
+                <button onclick="borderedRectCtrl.removeActive()">remove rect</button>
+                <button onclick="borderedRectCtrl.removeAll()">remove all</button>
+                <button onclick="borderedRectCtrl.logActive()">log active value</button>
+                <button onclick="borderedRectCtrl.logAll()">log all rel vals.</button>
+            </div>
+            <div class="log"></div>
+        </div>
+    </body>
+    <script src="/bower_components/inherit/lib/inherit.js"></script>
+    <script src="/dist/svg-extras.js"></script>
+    <script src="/examples/bordered-rect/bordered-rect.js"></script>
+</html>

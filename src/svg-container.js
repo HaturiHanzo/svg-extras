@@ -64,7 +64,7 @@
          * @param {SVGElement} svgElement
          */
         setActiveElement: function (svgElement) {
-            if (svgElement && svgElement instanceof SVGElement && !svgElement.isActive) {
+            if (svgElement && svgElement instanceof svgext.SVGElement && !svgElement.isActive) {
                 this.deactivateActiveElement();
                 svgElement.activate();
                 this.activeElement = svgElement;

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>svg-extras.resizable-rect</title>
+        <link rel="stylesheet" href="/dist/svg-extras.css"/>
+        <link rel="stylesheet" href="/examples/example.css"/>
+    </head>
+    <body>
+        <div>
+            <a href="/examples">home</a>
+            <h3>Resizable rectangle</h3>
+            <div class="container"></div>
+            <div class="controls">
+                <button onclick="resizableRectCtrl.createPolygon()">create rect</button>
+                <button onclick="resizableRectCtrl.removeActive()">remove rect</button>
+                <button onclick="resizableRectCtrl.removeAll()">remove all</button>
+                <button onclick="resizableRectCtrl.logActive()">log active value</button>
+                <button onclick="resizableRectCtrl.logAll()">log all rel vals.</button>
+            </div>
+            <div class="log"></div>
+        </div>
+    </body>
+    <script src="/bower_components/inherit/lib/inherit.js"></script>
+    <script src="/dist/svg-extras.js"></script>
+    <script src="/examples/resizable-rect/resizable-rect.js"></script>
+</html>
