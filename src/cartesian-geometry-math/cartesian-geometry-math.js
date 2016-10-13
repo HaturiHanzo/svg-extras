@@ -38,7 +38,7 @@
          * Finds line segment middle point
          *
          * @param {LineSegment} lineSegment
-         * @returns {Point}
+         * @returns {Array} Point
          */
         lineSegmentMidPoint: function (lineSegment) {
             return [

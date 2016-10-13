@@ -146,7 +146,7 @@
     // Disallows newline before opening curly brace of all block statements. Boolean
     "disallowNewlineBeforeBlockStatements": true,
     // Option to check line break characters. String
-    "validateLineBreaks": "LF",
+    "validateLineBreaks": "CRLF",
     // Requires all quote marks to be either the supplied value, or consistent if true. tring or Object
     "validateQuoteMarks": "'",
     // Validates indentation for switch statements and block statements. Integer or String

@@ -1,0 +1,12 @@
+bower_components
+.idea
+npm-debug.log
+src
+examples
+.bowerrc
+.gitignore
+.jscsrc
+.jshintrc
+bower.json
+gulpfile.js
+karma.config.js

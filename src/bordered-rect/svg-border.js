@@ -4,6 +4,7 @@
  * @name SVGBorderedRect
  * @namespace Services
  */
+
 (function (svgext) {
     'use strict';
 

@@ -1,6 +1,6 @@
 {
   "name": "svg-extras",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Extends basic svg figures",
   "homepage": "https://github.com/HaturiHanzo/svg-extras",
   "repository": {
@@ -24,6 +24,12 @@
   "engines": {
     "node": ">=4.2.0"
   },
+  "scripts": {
+    "prepublish": "gulp build",
+    "test": "gulp test",
+    "jscs": "./node_modules/.bin/jscs -c .jscsrc ./src",
+    "jshint": "./node_modules/.bin/jshint -c .jshintrc ./src"
+  },
   "devDependencies": {
     "gulp": "3.9.0",
     "gulp-cssmin": "0.1.7",
@@ -36,7 +42,10 @@
     "karma-jasmine": "1.0.2",
     "karma-phantomjs-launcher": "1.0.1",
     "jasmine-core": "2.4.1",
-    "karma-spec-reporter": "0.0.26"
+    "karma-spec-reporter": "0.0.26",
+    "jscs": "3.0.5",
+    "jscs-jsdoc": "2.0.0",
+    "jshint": "2.9.2"
   },
   "license": "MIT"
 }
