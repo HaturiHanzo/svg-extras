@@ -1,12 +1,10 @@
-bower_components
 .idea
-npm-debug.log
-src
-examples
 .bowerrc
 .gitignore
 .jscsrc
 .jshintrc
-bower.json
+npm-debug.log
+bower_components
 gulpfile.js
 karma.config.js
+src
