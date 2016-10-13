@@ -12,10 +12,16 @@
         /**
          * SVGContainer class constructor
          *
+         * @param {Object} [opts]
+         * @param {String} [opts.cssClass]
+         * @param {SVGSVGElement} [opts.node] existing svg element
          * @constructor
          */
-        __constructor: function () {
-            this.__base({isDraggable: false}, 'svg');
+        __constructor: function (opts) {
+            opts = opts || {};
+            opts.isDraggable = false;
+            opts.cssClass = opts.cssClass || 'svg-container_fluid';
+            this.__base(opts, opts.node || 'svg');
             this._offWindowResize = svgext._throttleEventListener('resize', this._onWindowResize.bind(this));
         },
 

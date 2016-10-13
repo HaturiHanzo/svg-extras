@@ -62,7 +62,7 @@
             if ((event.which && event.which === 3) || (event.button && event.button === 2)) {
                 return;
             }
-            //$('body').addClass('unselectable');
+            document.body.classList.add('unselectable');
 
             this._saveClientCoords(event.changedTouches ? event.changedTouches[0] : event);
             if (svgext._isTouchDevice) {
@@ -126,7 +126,7 @@
         _dndOnMouseUp: function () {
             this._lastClientCoords = null;
             this.removeDndHandlers();
-            //$('body').removeClass('unselectable');
+            document.body.classList.remove('unselectable');
         },
 
         /**

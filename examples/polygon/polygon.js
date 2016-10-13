@@ -5,7 +5,10 @@ var polygonCtrl = {
      * Creates a container
      */
     createContainer: function () {
-        this.container = new svgext.SVGContainer().addClass('svg-container_fluid');
+        this.container = new svgext.SVGContainer({
+            node: document.getElementById('svg__polygon'),
+            cssClass: 'svg-container_fluid'
+        });
         document.querySelector('.container').appendChild(this.container.node);
     },
 

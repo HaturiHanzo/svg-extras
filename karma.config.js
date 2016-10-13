@@ -10,7 +10,10 @@ module.exports = function (config) {
         frameworks: ['jasmine'],
 
         // list of files / patterns to load in the browser
-        files: ['./src/**/*.js'],
+        files: ['./bower_components/inherit/lib/inherit.js',
+            './dist/svg-extras.js',
+            './src/**/*.spec.js'
+        ],
 
         reporters: ['spec'],
 
@@ -37,7 +40,7 @@ module.exports = function (config) {
 
         // level of logging
         // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
-        logLevel: config.LOG_INFO,
+        logLevel: config.LOG_DEBUG,
 
         loggers: [{type: 'console'}],
 

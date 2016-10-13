@@ -14,7 +14,7 @@
     display: none !important;
 }
 
-.svg_draggable:active {
+.svg_draggable {
     cursor: move;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .svg-border.active {
-    stroke: #77f;
+    stroke: #050;
     stroke-width: 1px;
     stroke-dasharray: 5,5;
 }

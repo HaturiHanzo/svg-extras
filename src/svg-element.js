@@ -18,11 +18,11 @@
          * @param {Boolean} [opts.isDraggable=true]
          * @param {Boolean} [opts.backgroundColor=#00d]
          * @param {Boolean} [opts.cssClass]
-         * @param {String} tagName
+         * @param {String|SVGSVGElement} tag
          * @constructor
          */
-        __constructor: function (opts, tagName) {
-            this.rootNode = this.node = this.createElem(tagName);
+        __constructor: function (opts, tag) {
+            this.rootNode = this.node = typeof tag === 'string' ? this.createElem(tag) : tag;
             opts = opts || {};
             if (opts.cssClass) {
                 this.addClass(opts.cssClass);

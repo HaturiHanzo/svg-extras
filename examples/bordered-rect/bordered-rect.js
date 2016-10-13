@@ -5,7 +5,7 @@ var borderedRectCtrl = {
      * Creates a container
      */
     createContainer: function () {
-        this.container = new svgext.SVGContainer().addClass('svg-container_fluid');
+        this.container = new svgext.SVGContainer();
         document.querySelector('.container').appendChild(this.container.node);
     },
 
