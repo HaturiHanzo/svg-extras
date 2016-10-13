@@ -1,9 +1,26 @@
 {
   "name": "svg-extras",
-  "version": "1.0.1",
   "description": "Extends basic svg figures",
-  "homepage": "https://github.com/HaturiHanzo/svg-extras",
-  "author": "Roman Mishchenko <mishchenkoroman95@gmail.com>",
+  "main": [
+    "dist/svg-extras.min.js",
+    "dist/svg-extras.min.css"
+  ],
+  "moduleType": "globals",
+  "license": "MIT",
+  "ignore": [
+    ".idea",
+    ".bowerrc",
+    ".gitignore",
+    ".jscsrc",
+    ".jshintrc",
+    "npm-debug.log",
+    "package.json",
+    "bower_components",
+    "node_modules",
+    "gulpfile.js",
+    "karma.config.js",
+    "src"
+  ],
   "keywords": [
     "SVG",
     "rectangle",
@@ -14,11 +31,12 @@
     "drag",
     "drop"
   ],
-  "bugs": {
-    "url": "https://github.com/HaturiHanzo/svg-extras/issues"
-  },
+  "authors": [
+    "Roman Mishchenko <mishchenkoroman95@gmail.com>"
+  ],
+  "homepage": "https://github.com/HaturiHanzo/svg-extras",
+  "repository": "https://github.com/HaturiHanzo/svg-extras",
   "dependencies": {
     "inherit": "dfilatov/inherit#2.2.4"
-  },
-  "license": "MIT"
+  }
 }
