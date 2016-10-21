@@ -52,18 +52,18 @@
             if (type === 'vertical') {
                 // Finds vertical point index with the smallest Y value
                 smallestPointIndex = points[0].getY() >= points[1].getY() ? 1 : 0;
-                this.setY((svgext.default.vertexHeight / 2) + points[smallestPointIndex].getY());
+                this.setY((svgext.default.control.height / 2) + points[smallestPointIndex].getY());
                 this.height(points[smallestPointIndex ? 0 : 1].getY() - points[smallestPointIndex].getY());
-                var hPointsY = this.getY() + (this.height() / 2) - svgext.default.vertexHeight / 2;
+                var hPointsY = this.getY() + (this.height() / 2) - svgext.default.control.height / 2;
                 [points[2], points[3]].forEach(function (hPoint) {
                     hPoint.setY(hPointsY);
                 });
             } else {
                 // Finds vertical point index with the smallest X value
                 smallestPointIndex = points[2].getX() >= points[3].getX() ? 3 : 2;
-                this.setX((svgext.default.vertexWidth / 2) + points[smallestPointIndex].getX());
+                this.setX((svgext.default.control.width / 2) + points[smallestPointIndex].getX());
                 this.width(points[smallestPointIndex === 3 ? 2 : 3].getX() - points[smallestPointIndex].getX());
-                var vPointsX = this.getX() + (this.width() / 2) - svgext.default.vertexWidth / 2;
+                var vPointsX = this.getX() + (this.width() / 2) - svgext.default.control.width / 2;
                 [points[0], points[1]].forEach(function (vPoint) {
                     vPoint.setX(vPointsX);
                 });
@@ -163,11 +163,11 @@
                 return;
             }
             this.controls = [];
-            var halfControlWidth = svgext.default.vertexWidth / 2,
-                halfControlHeight = svgext.default.vertexHeight / 2,
+            var halfControlWidth = svgext.default.control.width / 2,
+                halfControlHeight = svgext.default.control.height / 2,
                 controlOpts = {
-                    width: svgext.default.vertexWidth,
-                    height: svgext.default.vertexHeight,
+                    width: svgext.default.control.width,
+                    height: svgext.default.control.height,
                     cssClass: 'svg-rectangle-control'
                 };
             // Top

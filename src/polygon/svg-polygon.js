@@ -238,7 +238,6 @@
             this.render();
         },
 
-
         /**
          * Activates polygon
          *
@@ -273,8 +272,8 @@
          */
         _createVertex: function (point) {
             var vertex = new svgext.SVGPolygonVertex({
-                    width: svgext.default.vertexWidth,
-                    height: svgext.default.vertexHeight,
+                    width: svgext.default.control.width,
+                    height: svgext.default.control.height,
                     x: point[0],
                     y: point[1],
                     cssClass: 'svg-polygon-vertex'
@@ -305,30 +304,13 @@
                 return;
             }
 
-            var removedNearPoint,
-                containerRect = this.getContainerRect(),
+            var containerRect = this.getContainerRect(),
                 point = svgext._isTouchDevice ? [
                     event.changedTouches[0].clientX - containerRect.left,
                     event.changedTouches[0].clientY - containerRect.top
                 ] : [
                     event.offsetX, event.offsetY
                 ];
-
-            removedNearPoint = this.vertexes.some(function (vertex) {
-                var dist = svgext.CartesianGeometryMath.distanceBtwTwoPoints([
-                    vertex.getX() + vertex.width() / 2,
-                    vertex.getY() + vertex.height() / 2
-                ], point);
-                if (dist < svgext.default.polygonAddPointDist) {
-                    this._removeVertex(vertex);
-
-                    return true;
-                }
-            }, this);
-
-            if (removedNearPoint) {
-                return;
-            }
 
             this.addPoint(point);
         }

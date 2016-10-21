@@ -35,6 +35,10 @@
             this.__base(opts);
             this.type = opts.type;
             this.addClass('svg-rectangle-control_type_' + this.type);
+
+            if (svgext._isTouchDevice) {
+                this.addClass('svg-control_type_touch');
+            }
         },
 
         /**

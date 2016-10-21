@@ -95,6 +95,13 @@
     display: block;
 }
 
+.svg-control_type_touch {
+    stroke: #000;
+    stroke-opacity: 0;
+    stroke-width: 30px;
+    stroke-linejoin: round;
+}
+
 .unselectable {
     user-select: none;
     -moz-user-select: none;

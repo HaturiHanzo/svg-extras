@@ -14,7 +14,7 @@ var resizableRectCtrl = {
      *
      * @returns {SVGResizableRect}
      */
-    createPolygon: function () {
+    createRect: function () {
         var containerRect = this.container.getRect(),
             rect = new svgext.SVGResizableRect({
                 x: (1 / 4) * containerRect.width,

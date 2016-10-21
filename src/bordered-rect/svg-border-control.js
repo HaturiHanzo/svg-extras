@@ -17,9 +17,13 @@
             this.__base({
                 cssClass: 'svg-border-control',
                 isDraggable: true,
-                width: svgext.default.vertexWidth,
-                height: svgext.default.vertexHeight
+                width: svgext.default.control.width,
+                height: svgext.default.control.height
             });
+
+            if (svgext._isTouchDevice) {
+                this.addClass('svg-control_type_touch');
+            }
         },
 
         /**
@@ -72,14 +76,15 @@
          * @param {axis} [axis] Changed axis
          */
         render: function (axis) {
-            var rect = this.container;
+            var rect = this.container,
+                offset = svgext.default.borderedRect.borderOffset;
 
             if (axis !== 'x') {
-                this.setY(rect.getY() + rect.height() + svgext.default.borderOffset - svgext.default.vertexHeight / 2);
+                this.setY(rect.getY() + rect.height() + offset - svgext.default.control.height / 2);
             }
 
             if (axis !== 'y') {
-                this.setX(rect.getX() + rect.width() + svgext.default.borderOffset - svgext.default.vertexWidth / 2);
+                this.setX(rect.getX() + rect.width() + offset - svgext.default.control.width / 2);
             }
         }
     });

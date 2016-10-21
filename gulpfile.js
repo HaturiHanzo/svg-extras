@@ -106,6 +106,7 @@ function getSrc() {
         'svg-block.js',
         'svg-draggable.js',
         'svg-container.js',
+        'svg-control.js',
         'svg-rect.js',
         'cartesian-geometry-math/cartesian-geometry-math.js',
         'polygon/svg-polygon-vertex.js',

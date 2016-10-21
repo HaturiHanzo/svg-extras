@@ -30,6 +30,10 @@
         __constructor: function (opts) {
             opts = opts ? opts : {isDraggable: true};
             this.__base(opts);
+
+            if (svgext._isTouchDevice) {
+                this.addClass('svg-control_type_touch');
+            }
         },
 
         /**

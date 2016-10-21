@@ -39,14 +39,16 @@
          * @param {axis} [axis] Changed axis
          */
         render: function (axis) {
+            var offset = svgext.default.borderedRect.borderOffset;
+
             if (axis !== 'x') {
-                this.attr('y', this.container.getY() - svgext.default.borderOffset)
-                    .attr('height', this.container.height() + 2 * svgext.default.borderOffset);
+                this.attr('y', this.container.getY() - offset)
+                    .attr('height', this.container.height() + 2 * offset);
             }
 
             if (axis !== 'y') {
-                this.attr('x', this.container.getX() - svgext.default.borderOffset)
-                    .attr('width', this.container.width() + 2 * svgext.default.borderOffset);
+                this.attr('x', this.container.getX() - offset)
+                    .attr('width', this.container.width() + 2 * offset);
             }
         }
     });

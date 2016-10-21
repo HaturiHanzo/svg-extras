@@ -91,6 +91,8 @@
 
             if (data.changedTouches) {
                 event.preventDefault();
+                event.stopPropagation();
+                event.stopImmediatePropagation();
                 data = event.changedTouches[0];
             }
             if (!this._lastClientCoords) {
