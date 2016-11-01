@@ -50,6 +50,14 @@
          * @returns {SVGBlock}
          */
         remove: function (svgElem) {
+            if (!svgElem) {
+                return;
+            }
+
+            if (svgElem.isActive && this.deactivateActiveElement) {
+                this.deactivateActiveElement();
+            }
+
             this.children.splice(this.children.indexOf(svgElem), 1);
             this.removeElem(svgElem.rootNode);
             svgElem.destroy();
