@@ -70,18 +70,28 @@
          * @returns {Number}
          */
         findPolygonInsertIndex: function (polygonPoints, point) {
-            var smallestDistance = 10000,
+            var smallestDistance = Number.POSITIVE_INFINITY,
+                lineSegments = this.generateLineSegments(polygonPoints),
                 result;
 
-            // Findind the nearest pair
-            this.generateLineSegments(polygonPoints).forEach(function (lineSegment, index) {
-                var distance = this.distanceBtwTwoPoints(
-                    this.lineSegmentMidPoint(lineSegment),
-                    point
-                );
+            // Finds the nearest pair
+            lineSegments.forEach(function (lineSegment, index) {
+                var midpoint = this.lineSegmentMidPoint(lineSegment),
+                    distance = this.distanceBtwTwoPoints(midpoint, point);
+
                 if (smallestDistance > distance) {
-                    smallestDistance = distance;
-                    result = index + 1;
+                    // Checks if a new point won't create a complex polygon
+                    var tmpSegments = lineSegments.slice(), intersection;
+
+                    tmpSegments.splice(index, 1);
+                    intersection = tmpSegments.some(function (ls) {
+                        return this.checkLinesIntersection(ls, [midpoint, point]);
+                    }, this);
+
+                    if (!intersection) {
+                        smallestDistance = distance;
+                        result = index + 1;
+                    }
                 }
             }, this);
 
