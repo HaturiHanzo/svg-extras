@@ -1,19 +1,15 @@
-/**
- * Defines SVGBorder
- *
- * @name SVGBorderedRect
- * @namespace Services
- */
-
 (function (svgext) {
     'use strict';
 
-    svgext.SVGBorder = inherit(svgext.SVGElement, {
+    svgext.SVGBorder = inherit(svgext.SVGElement, /** @lends svgext.SVGBorder.prototype*/ {
 
         /**
-         * SVGBorder class constructor
+         * Creates svgext.SVGBorder
          *
-         * @constructor
+         * @constructs svgext.SVGBorder
+         * @classdesc Defines border class for svgext.SVGBorderedRect
+         * @augments svgext.SVGElement
+         * @private
          */
         __constructor: function () {
             this.__base({

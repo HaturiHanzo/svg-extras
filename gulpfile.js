@@ -75,6 +75,8 @@ gulp.task('build', function (callback) {
 
 gulp.task('serve', false, function (callback) {
     connect()
+        // Decided to use two path's, not to break project structure for examples
+        .use(serveStatic(path.join(__dirname, 'examples')))
         .use(serveStatic(path.join(__dirname)))
         .listen(DEFAULT_PORT, callback);
 });
