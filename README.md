@@ -7,6 +7,13 @@ At the moment there are 3 custom shapes.
 - [Resizable rectangle](https://jsfiddle.net/3mgjan00/)
 - [Bordered rectangle](https://jsfiddle.net/aw9xyk5t/)
 
+## Installation
+There are two options to install module:
+- Using bower: `bower install svg-extras`
+- Using npm: `npm install svg-extras --save`
+
+All the necessary files are in a `dist` directory
+
 ## Documentation
 - [API docs](https://haturihanzo.github.io/svg-extras/svgext.html)
 
