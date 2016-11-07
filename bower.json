@@ -35,8 +35,5 @@
     "Roman Mishchenko <mishchenkoroman95@gmail.com>"
   ],
   "homepage": "https://github.com/HaturiHanzo/svg-extras",
-  "repository": "https://github.com/HaturiHanzo/svg-extras",
-  "dependencies": {
-    "inherit": "dfilatov/inherit#2.2.4"
-  }
+  "repository": "https://github.com/HaturiHanzo/svg-extras"
 }

@@ -35,9 +35,25 @@ gulp.task('build.js', function (callback) {
  * Concatenates all js files and minifies them
  */
 gulp.task('build.min.js', function (callback) {
-    var stream = getSrc()
+    var stream = gulp.src('./dist/svg-extras.js')
         .pipe(uglify({mangle: true}))
         .pipe(concat('svg-extras.min.js'))
+        .pipe(gulp.dest('./dist'));
+
+    streamHandler(stream, callback);
+});
+
+/**
+ * Concatenates vendor libs with the build file
+ */
+gulp.task('build.full.min.js', function (callback) {
+    var stream = gulp.src([
+            './bower_components/eventemitter3/index.js',
+            './bower_components/inherit/lib/inherit.js',
+            './dist/svg-extras.min.js'
+        ])
+        .pipe(uglify({mangle: true}))
+        .pipe(concat('svg-extras.full.min.js'))
         .pipe(gulp.dest('./dist'));
 
     streamHandler(stream, callback);
@@ -58,7 +74,7 @@ gulp.task('build.css', function (callback) {
  * Concatenates all css files and minifies them
  */
 gulp.task('build.min.css', function (callback) {
-    var stream = gulp.src('./src/**/*.css')
+    var stream = gulp.src('./dist/svg-extras.css')
         .pipe(cssmin())
         .pipe(concat('svg-extras.min.css'))
         .pipe(gulp.dest('./dist'));
@@ -70,7 +86,11 @@ gulp.task('build.min.css', function (callback) {
  * Builds js and css files
  */
 gulp.task('build', function (callback) {
-    return sequence(['build.js', 'build.css', 'build.min.js', 'build.min.css'], callback);
+    return sequence(
+        ['build.js', 'build.css'],
+        ['build.min.js', 'build.min.css'],
+        'build.full.min.js',
+        callback);
 });
 
 gulp.task('serve', false, function (callback) {

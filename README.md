@@ -13,6 +13,22 @@ There are two options to install module:
 - Using npm: `npm install svg-extras --save`
 
 All the necessary files are in a `dist` directory
+### Note
+If you use `svg-extras.min.js` or `svg-extras.js` file.
+This two modules `https://github.com/primus/eventemitter3 && https://github.com/dfilatov/inherit`
+should be included into your html file
+## NPM & Bower package structure
+.
+ * dist
+   * svg-extras.js - concatenated js source code
+   * svg-extras.min.js - minified js source code
+   * svg-extras.full.min.js - minified js source code with included vendor libs(eventemitter3, inherit)
+   * svg-extras.css - concatenated css source code
+   * svg-extras.min.css - minified css source code
+ * examples directory with an examples, can be opened only if `gulp serve` is running
+ * bower.json
+ * README.md
+ * LICENSE
 
 ## Documentation
 - [API docs](https://haturihanzo.github.io/svg-extras/svgext.html)

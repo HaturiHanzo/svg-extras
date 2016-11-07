@@ -24,6 +24,19 @@ var borderedRectCtrl = {
             });
         this.container.append(rect);
 
+        rect.on('mutation.width', function (val) {
+            console.log(val);
+        });
+
+        rect.on('activated', function () {
+            console.log('I\'m active !');
+        });
+
+        rect.on('deactivated', function () {
+            console.log('I\'m inactive :(');
+        });
+
+
         return rect.select();
     },
 

@@ -1,6 +1,10 @@
 (function (global) {
     'use strict';
 
+    if (!EventEmitter) {
+        throw new Error('Svg-extras requires https://github.com/primus/eventemitter3');
+    }
+
     if (!inherit) {
         throw new Error('Svg-extras requires https://github.com/dfilatov/inherit');
     }

@@ -91,6 +91,7 @@
         "afterEach",
         "spyOn",
         "inherit",
-        "svgext"
+        "svgext",
+        "EventEmitter"
     ]
 }
