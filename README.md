@@ -3,9 +3,9 @@ Js module which is extending basic svg figures.
 At the moment there are 3 custom shapes.
 
 ## Live demo
-- [Polygon](https://jsfiddle.net/rbLfjy3h/)
-- [Resizable rectangle](https://jsfiddle.net/3mgjan00/)
-- [Bordered rectangle](https://jsfiddle.net/aw9xyk5t/)
+- [Polygon](https://jsfiddle.net/5uhkqbvo/)
+- [Resizable rectangle](https://jsfiddle.net/eap47s6x/)
+- [Bordered rectangle](https://jsfiddle.net/euf384gm/)
 
 ## Installation
 There are two options to install module:
@@ -17,18 +17,20 @@ All the necessary files are in a `dist` directory
 If you use `svg-extras.min.js` or `svg-extras.js` file.
 This two modules `https://github.com/primus/eventemitter3 && https://github.com/dfilatov/inherit`
 should be included into your html file
+
 ## NPM & Bower package structure
-.
- * dist
-   * svg-extras.js - concatenated js source code
-   * svg-extras.min.js - minified js source code
-   * svg-extras.full.min.js - minified js source code with included vendor libs(eventemitter3, inherit)
-   * svg-extras.css - concatenated css source code
-   * svg-extras.min.css - minified css source code
- * examples directory with an examples, can be opened only if `gulp serve` is running
- * bower.json
- * README.md
- * LICENSE
+```
+|-- dist
+    |-- svg-extras.js - concatenated js source code
+    |-- svg-extras.min.js - minified js source code
+    |-- svg-extras.full.min.js - minified js source code with included vendor libs(eventemitter3, inherit)
+    |-- svg-extras.css - concatenated css source code
+    |-- svg-extras.min.css - minified css source code
+|-- examples - directory with an examples, can be opened only if `gulp serve` is running
+|-- bower.json
+|-- README.md
+|-- LICENSE
+```
 
 ## Documentation
 - [API docs](https://haturihanzo.github.io/svg-extras/svgext.html)
